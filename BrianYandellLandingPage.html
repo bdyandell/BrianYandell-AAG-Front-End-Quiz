@@ -206,6 +206,16 @@
 				var stepID = "step" + whichStepIsVisible;
 				var identifyBlankFields = "homeValueStep1Question";
 				
+				if (whichStepIsVisible === "3"){
+					if((document.getElementById("homeValueStep3Question1")).value === ""){
+						document.getElementById("emptyFieldNotification").innerHTML = "Your phone number is required. Please fill out your number before pressing Submit.";
+						document.getElementById("emptyFieldNotification").style.display = "block";
+					}
+					else{
+						document.getElementById("emptyFieldNotification").innerHTML = "You completed the 3 steps!";
+						document.getElementById("emptyFieldNotification").style.display = "block";
+					}
+				}
 				if(whichStepIsVisible < 3){
 					var y = 1;
 					if(whichStepIsVisible === "1"){
@@ -240,16 +250,6 @@
 						}
 					}
 					
-				}
-				else{
-					if((document.getElementById("homeValueStep3Question1")).value === ""){
-						document.getElementById("emptyFieldNotification").innerHTML = "Your phone number is required. Please fill out your number before pressing Submit.";
-						document.getElementById("emptyFieldNotification").style.display = "block";
-					}
-					else{
-						document.getElementById("emptyFieldNotification").innerHTML = "You completed the 3 steps!";
-						document.getElementById("emptyFieldNotification").style.display = "block";
-					}
 				}
 			}	
 	</script>
